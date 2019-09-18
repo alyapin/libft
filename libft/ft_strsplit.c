@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kzina <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: kzina <kzina@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 16:30:57 by kzina             #+#    #+#             */
-/*   Updated: 2019/04/13 16:32:01 by kzina            ###   ########.fr       */
+/*   Updated: 2019/08/07 18:05:03 by kzina            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int		ft_count_word(char const *str, char c)
+int				ft_count_word(char const *str, char c)
 {
 	int		count;
 

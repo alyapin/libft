@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kzina <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: kzina <kzina@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/10 16:17:59 by kzina             #+#    #+#             */
-/*   Updated: 2019/05/30 12:06:44 by kzina            ###   ########.fr       */
+/*   Updated: 2019/09/18 20:15:44 by kzina            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <fcntl.h>
 
 typedef struct		s_list
 {
@@ -25,6 +26,15 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+typedef struct		s_lst
+{
+	char			*content;
+	int				fd;
+	unsigned long	point;
+	struct s_lst	*next;
+}					t_lst;
+
+# define BUFF_SIZE 2000
 # define MAX_INT 2147483647
 # define MIN_INT -2147483648
 
@@ -57,7 +67,7 @@ char				*ft_strchr(const char *s, int c);
 void				ft_strclr(char *s);
 int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strcpy(char *dst, const char *src);
-void				ft_strdel(char **as);
+void				ft_strdel(void **as);
 char				*ft_strdup(const char *s1);
 int					ft_strequ(char const *s1, char const *s2);
 void				ft_striter(char *s, void (*f)(char*));
@@ -95,5 +105,10 @@ t_list				*ft_lstfind(t_list *lst, void *content,
 t_list				*ft_lstmerge(t_list *lst1, t_list *lst2);
 size_t				ft_lstcount(t_list *lst);
 void				ft_lstrev(t_list **alst);
+int					get_next_line(const int fd, char **line);
+int					ft_count_word(char const *str, char c);
+void				ft_strarraydel(void ***str);
+int					ft_atoi_base(char *nb, int base);
+int					ft_rgb(int red, int green, int blue);
 
 #endif

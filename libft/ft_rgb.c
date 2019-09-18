@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_rgb.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kzina <kzina@student.42.fr>                +#+  +:+       +#+        */
+/*   By: kzina <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/07 19:01:17 by kzina             #+#    #+#             */
-/*   Updated: 2019/08/01 15:52:38 by kzina            ###   ########.fr       */
+/*   Created: 2019/09/18 20:14:19 by kzina             #+#    #+#             */
+/*   Updated: 2019/09/18 20:15:16 by kzina            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(void **as)
+int		ft_rgb(int red, int green, int blue)
 {
-	if (!as)
-		return ;
-	free(*as);
-	*as = NULL;
+	return ((red << 16) + (green << 8) + blue);
 }

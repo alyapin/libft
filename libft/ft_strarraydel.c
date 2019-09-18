@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_strarraydel.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kzina <kzina@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/07 19:01:17 by kzina             #+#    #+#             */
-/*   Updated: 2019/08/01 15:52:38 by kzina            ###   ########.fr       */
+/*   Created: 2019/08/07 18:24:13 by kzina             #+#    #+#             */
+/*   Updated: 2019/08/09 04:52:56 by kzina            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(void **as)
+void	ft_strarraydel(void ***str)
 {
-	if (!as)
-		return ;
-	free(*as);
-	*as = NULL;
+	int x;
+
+	x = 0;
+	while ((*str)[x] != NULL)
+	{
+		ft_strdel(&(*str)[x]);
+		x++;
+	}
+	ft_strdel((void **)str);
 }

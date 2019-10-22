@@ -56,7 +56,7 @@ Library with my own version of some useful standard function of C
 * [ft_putchar_fd](https://github.com/alyapin/libft/blob/master/libft/ft_putchar_fd.c)
 * [ft_putstr_fd](https://github.com/alyapin/libft/blob/master/libft/ft_putstr_fd.c)
 * [ft_putendl_fd](https://github.com/alyapin/libft/blob/master/libft/ft_putendl_fd.c)
-* [ft_putnbr_fd](https://github.com/alyapin/libft/blob/master/libft/ft_putnbr_fd.c)*
+* [ft_putnbr_fd](https://github.com/alyapin/libft/blob/master/libft/ft_putnbr_fd.c)
 
 ### Bonus functions
 * [ft_lstnew](https://github.com/alyapin/libft/blob/master/libft/ft_lstnew.c)
